@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Plate Inn</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="forkxknife.png">
+    <style>
+      section {
+        font-family: helvetica;
+        font-size: 1.2em;
+        line-height: 1.2em;
+        margin: 1.5%;
+      }
+      .info:focus {
+        outline: none;
+        border: 2px solid #AE2012; 
+      }
+      ul label {
+        position: relative;
+        bottom: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li title="Wanna go home?"><a href="index.html">Home</a></li>
+          <li title="Go to the menu!"><a href="menu.html">Menu</a></li>
+          <li title="You're already here?"><a href="#">Delivery</a></li>
+        </ul>
+      </nav>
+      <h1 style="text-align: center;">Plate Inn</h1>
+    </header>
+    <section>
+      <fieldset>
+        <legend>Your Information</legend>
+        <form>
+          <ul>
+            <li><label for="customername">Name: <input type="text" name="customername" class="info"></label></li><br>
+            <li><label for="customeradderss">Address: <input type="text" name="customeraddress" class="info"></label></li><br>
+            <li><label for="customeremail">Email: <input type="email" name="customeremail" class="info"></label></li><br>
+            <li><label for="customertel">Telephone: <input type="tel" name="customertel" class="info"></label></li><br>
+            <li><label for="customermsg">Custom Message: <textarea name="customermsg" class="info" placeholder="30 Characters Limit" rows="1" maxlength="30"></textarea></label></li><br>
+          </ul>
+      </fieldset><br>
+      <fieldset >
+        <legend>Cake Architecture</legend>
+        <fieldset style="border: .75px solid #f9844a">
+          <legend style="color: #f9844a;">Flavor <i style="font-size: .75em; font-weight: lighter;">(Choose one)</i></legend>
+            <ul class="flavors" style="color: #9B2226">
+              <li>
+                <input type="radio" name="flavor" value="vanilla" class="container" checked>
+                <label>Vanilla</label><hr class="colorborder" style="border: 10px #f3e5ab solid;">
+              </li><p></p>
+              <li>
+                <input type="radio" name="flavor" value="almond">
+                <label>Almond</label><hr class="colorborder" style="border: 10px #efdecd solid;">
+              </li><p></p>
+              <li>
+                <input type="radio" name="flavor" value="funfetti">
+                <label>Funfetti</label><hr class="colorborder" style="border: 10px solid #b19cd9;">
+              </li><p></p>
+              <li>
+                <input type="radio" name="flavor" value="chocolate">
+                <label>Chocolate</label><hr class="colorborder" style="border: 10px solid #7B3F00;"
+              </li><p></p>
+              <li>
+                <input type="radio" name="flavor" value="marble">
+                <label>Marble</label><hr class="colorborder" style="border-top: 10px solid #f3e5ab; border-bottom: 10px solid #7B3F00; border-left-width: 10px; border-right-width: 10px;">
+              </li><p></p>
+              <li>
+                <input type="radio" name="flavor" value="redvel">
+                <label>Red Velvet</label><hr class="colorborder" style="border-top: 10px solid #BD0F03; border-bottom: 10px solid #FFFDD0; border-left-width: 10px; border-right-width: 10px;">
+              </li><p></p>
+              <li>
+                <input type="radio" name="flavor" value="lemon">
+                <label>Lemon</label><hr class="colorborder" style="border: 10px solid #fff44f"
+              </li><p></p>
+              <li>
+                <input type="radio" name="flavor" value="strawberry">
+                <label>Strawberry</label><hr class="colorborder" style="border: 10px solid #FC9FB1;">
+              </li><p></p>
+              <li>
+                <input type="radio" name="flavor" value="carrot">
+                <label>Carrot</label><hr class="colorborder" style="border: 10px #ed9121 solid;"
+              </li><p></p>
+            </ul>
+      </fieldset><p></p>
+        <fieldset style="border: .75px solid #9B2226"> 
+          <legend style="color: #9B2226">Filling <i style="font-size: .75em; font-weight: lighter;">(Choose one)</i></legend>
+            <ul style="color: #f9844a" class="fillings"">
+              <li>
+                <input type="radio" name="filling" value="oreo">
+                <label>Oreo Crumble</label>
+              </li>
+              <li><p></p>
+                <input type="radio" name="filling" value="white">
+                <label>White Ginache</label>
+              </li>
+              <li><p></p>
+                <input type="radio" name="filling" value="chocolate">
+                <label>Chocolate Ginache</label>
+              </li><p></p>
+              <li>
+                <input type="radio" name="filling" value="cream-cheese">
+                <label>Cream Cheese</label>
+              </li><p></p>
+              <li>
+                <input type="radio" name="filling" value="buttercream">
+                <label>Buttercream</label>
+              </li><p></p>
+              <li>
+                <input type="radio" name="filling" value="chocobuttercream">
+                <label>Chocolate Buttercream</label>
+              </li><p></p>
+            </ul>
+        </fieldset><p></p>
+        <fieldset style="border: .75px solid #f9844a">
+          <legend style="color: #f9844a">Icing <i style="font-size: .75em; font-weight: lighter;">(Choose as many as you want)</i></legend>
+            <ul style="color: #9B2226" class="icings">
+              <li>
+                <input type="checkbox" name="icing" value="buttercream">
+                <label>Buttercream</label>
+              </li><p></p>
+              <li>
+                <input type="checkbox" name="icing" value="whipped">
+                <label>Whipped Cream</label>
+              </li><p></p>
+              <li>
+                <input type="checkbox" name="icing" value="royal">
+                <label>Royal Icing</label>
+              </li><p></p>
+              <li>
+                <input type="checkbox" name="icing" value="cream-cheese">
+                <label>Cream Cheese Frosting</label>
+              </li><p></p>
+            </ul>
+        </fieldset><p></p>
+        <fieldset style="border: .75px solid #9B2226">
+          <legend style="color: #9B2226">Decorations <i style="font-size: .75em; font-weight: lighter;">(Choose as many as you want)</i></legend>
+            <ul style="color: #f9844a" class="decorations">
+              <li>
+                <input type="checkbox" name="decorations" value="f-snake">
+                <label>Fondant Snake</label>
+              </li><p></p>
+              <li>
+                <input type="checkbox" name="decorations" value="flowers">
+                <label>Flowers</label>
+              </li><p></p>
+              <li>
+                <input type="checkbox" name="decorations" value="sprinkles">
+                <label>Sprinkles</label>
+              </li><p></p>
+              <li>
+                <input type="checkbox" name="decorations" value="coconuts">
+                <label>Coconuts</label>
+              </li><p></p>
+              <li>
+                <input type="checkbox" name="decorations" value="nuts">
+                <label>Nuts</label>
+              </li><p></p>
+              <li>
+                <input type="checkbox" name="decorations" value="caramel">
+                <label>Caramel</label>
+              </li><p></p>
+            </ul>
+        </fieldset>
+      </fieldset>
+        <input type="submit">
+        <input type="reset">
+       </form>
+    <script src="script.js"></script>
+  </body>
+</html>
