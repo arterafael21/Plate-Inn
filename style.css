@@ -16,11 +16,30 @@ section.index {
   text-align: justify;
   text-align-last: center;
   margin: auto 12.5%;
+  color: #3a3b3c;
+}
+
+.quotes-container {
+  padding: 0.5em;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  background-color: #E4F6F8;
+}
+
+.quote-item {
+  font-family: Georgia;
+  margin: 1em;
+  background-color: #f9f9f9;
+  padding: 1em;
+  border-radius: 1em;
+  width: 20%;
+  line-height: 1.5em;
 }
 
 a {
   text-decoration: none;
-  padding-bottom: 2em;
 }
 
 header {
@@ -53,11 +72,12 @@ main.menu {
   /* border: 4px double #E9D8A6; */
   border-radius: 50px;
   margin: 1.5%;
+  text-align: center;
 }
 
 .menu h2 {
   color: #0A9396;
-  text-align: left;
+  text-align: center;
   font-size: 2em;
 }
 
@@ -122,33 +142,43 @@ main.menu {
   font-size: 125%;
 }
 
-/*.menu p {
-  width: 50%;
-  padding-left: 2em;
-  margin-left: 1.5%
-} */
-
 /* sign thing */
 
 .sign {
   color: white;
-  background-color: #E63946;
-  background-size: cover; 
+/*   background-color: #E63946; */
+  background-image: url("https://inspirationfeed.com/wp-content/uploads/2019/01/bernard-hermant-591275-unsplash-800x533.jpg");
+/*   background-size: cover; */
+  border-bottom: 5px solid lightblue;
   height: 100%;
+  min-height: calc(100vh - 43.563px);
   text-align: center;
-  line-height: 1.6;
+  line-height: 2;
   justify-content: center;
 }
 
 .sign p {
-  font-family: garamond;
-  margin-top: 25px;
-  margin-bottom: -300px;
+  font-family: tisa;
+  margin-top: 0px;
+  margin-bottom: -350px;
   font-size: 8em;
+  letter-spacing: 5px;
+  padding: 25px;
+  position: relative;
+  z-index: 2;
 }
 
 .sign h1 {
   font-size: 15em;
+  position: relative;
+  z-index: 3;
+}
+
+div.sign img:last-child {
+  width: 45%;
+  height: 45%;
+   margin: auto;
+  margin-top: -300px;
 }
 
 /* img decor */
@@ -161,12 +191,32 @@ main.menu {
   width: 45%;
 } */
 
-.socials {
-  height: 2%;
-  width: 2%;
+.description-item div:last-child a {
+  display: inline-block; 
+  position: relative; 
+  z-index: 1; 
+}
+
+.description-item div:last-child a span {
   display: inline-block;
-  margin-left: auto;
-  margin-right: auto;
+}
+
+.description-item div:last-child a span object {
+  position: relative; 
+  z-index: -1;
+}
+
+.socials {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  margin: auto;
+  transition: 0.2s;
+  border-radius: 4px;
+}
+
+.socials:hover {
+  background-color: #E2D8C0;
 }
 
 /* .menu img {
@@ -232,8 +282,27 @@ nav ul li a:active {
 }
 
 .aboutus {
-  color: #6c0e23;
+  color: #1D3557;
   line-height: 3;
+}
+
+dd > a, .index > a {
+  transition: 0.2s;
+  color: ##ADD8E6;
+  border-radius: .5em;
+  padding: 0em 4px;
+}
+
+dd > a:link, .index > a:link {
+  color: #a7a7a7;
+}
+
+dd > a:visited, .index > a:visited {
+  color: #b4b4b4;
+}
+
+dd > a:hover, .index > a:hover {
+  background-color: #E2D8C0;
 }
 
 .index dl, .index dt, .index dd {
@@ -244,33 +313,57 @@ nav ul li a:active {
 
 fieldset {
   color: #005F73;
-  border: .75px solid #005F73;;
-  border-radius: 10px;
+/*   border: .75px solid #005F73; */
+/*   border-radius: 10px; */
+  border: 0;
 }
 
 legend {
   font-weight: bolder;
   color: #005F73;
+  font-size: 1.2em;
+  letter-spacing: 3px;
+  padding: 20px;
+  text-align: center;
+}
+
+textarea {
+  resize: none;
+  overflow: hidden;
+}
+
+#infocontent, #cakedesign {
+  border-radius: 4px;
+  background-color: #f2e9e9;
+  position: relative;
+  border-radius: 40px;
+  padding: 20px;
+  text-align: center;
+  transition: 1s;
+}
+
+#infocontent:hover, #cakedesign:hover {
+  box-shadow: 40px 70px 30px 0px rgba(0, 0, 0, 0.4);
+}
+
+#infocontent li, #cakedesign li {
+  letter-spacing: 3px;
+}
+
+legend i {
+  font-size: .75em; 
+  font-weight: lighter;
 }
 
 ol, ul {
   list-style-type: none;
 }
-/* 
-.info {
-  display: block;
-  border: none;
-  border-bottom: 2px #AE2012 solid;
-  border-radius: 4px;
-  background-color: #F1FAEE;
-  width: 500px;
-  height: 25px;
-  font-size: .85em;
-  outline: none;
-}
- */
 
-.info {
+form li, fieldset {
+  margin: 1em 0;
+}
+
+.info, #feedbackcontent textarea {
   display: block;
   background-color: #dddddd;
   color: #666;
@@ -280,16 +373,19 @@ ol, ul {
   outline: none;
   height: calc(25px - 0.5em);
   width: 50%;
-  font-size: 1em;
+  font-size: 1.1em;
   font-family: Garamond;
+  transition: 100ms;
+  margin: auto;
+  text-align: center;
 }
 
-.info:hover {
+.info:hover, #feedbackcontent textarea:hover {
   cursor: pointer;
   background-color: #E1FAEE;
 }
 
-.info:focus {
+.info:focus, #feedbackcontent textarea:focus {
   cursor: text;
   color: #001219;
   background-color: #F1FAEE;
@@ -297,19 +393,37 @@ ol, ul {
 
 input[type="submit"], input[type="reset"] {
   background-color: #90be6d;
-  border: 1px #1D3557 solid;
+  border: none;
   padding: 10px 20px;
-  font-size: .75em;
-  font-family: verdana;
-  margin-top: 1.5%;
-  width: 49.8%;
+  font-size: 1.5em;
+  font-family: monospace;
+  margin: 10px 4.1%;
+  width: 41.5%;
   display: inline-block;
   border-radius: 10px;
+  transition: 500ms;
+  box-shadow: 4px 4px 3px lightblue;
+}
+
+input[type="submit"]:hover, input[type="reset"]:hover {
+  transform: scale(1.2);
+  box-shadwow: 4.8px 4.8px 3.6px lightblue;
 }
 
 .colorborder {
-  width: 33%;
-  margin-left: 0;
+  width: 50%;
+/*   margin-left: 0; */
+  border-radius: 4px;
+  transition: 1s;
+}
+
+.colorborder:hover {
+  transform: scale(1.5);
+  border-size: 250%;
+}
+
+form div:last-child {
+  text-align: center;
 }
 
 /* 
@@ -325,13 +439,14 @@ input[type="radio"] {
   background-color: #9B2226;
   color: #F1FAEE;
   font-weight: bold;
-  padding: 10px 20px;
-  box-shadow: 4px 4px 2px 1px #001219;
-  width: 25%;
+  padding: 15px 20px;
+  box-shadow: 4px 4px 2px 1px lightgray;
+  width: 49%;
   border-radius: 10px;
   font-size: .75em;
   letter-spacing: .2rem;
   text-align: center;
+  transition: 500ms;
 }
 
 .flavors label:hover, .icings label:hover {
@@ -353,13 +468,14 @@ input[type="radio"] {
   background-color: #BB3E03;
   color: #F1FAEE;
   font-weight: bold;
-  padding: 10px 20px;
-  box-shadow: 4px 4px 2px 1px #001219;
-  width: 25%;
+  padding: 15px 20px;
+  box-shadow: 4px 4px 2px 1px lightgray;
+  width: 49%;
   border-radius: 10px;
   font-size: .75em;
   letter-spacing: .2rem;
   text-align: center;
+  transition: 500ms;
   }
 
 .decorations label:hover, .fillings label:hover {
@@ -377,106 +493,74 @@ input[type="radio"], input[type="checkbox"] {
   border-radius: 20px;
 }
 
-@media only screen and (max-width: 1245px) {
+/* media */
+
+@media (max-width: 1199.98px) {
   .sign {
-    color: white;
-    background-color: #E63946;
-    background-size: cover; 
     height: 100%;
-    text-align: center;
-    line-height: 1.2;
+    min-height: calc(100vh - 43.563px);
+    line-height: 2;
     justify-content: center;
+    font-size: 1.8em;
   }
   .sign p {
-    font-family: garamond;
-    margin-bottom: -40px;
-    font-size: 1.6em;
+    margin-bottom: -145px;
+    font-size: 1.8em;
   }
   .sign h1 {
-    font-size: 3em;
+    font-size: 6em;
   }
   div.sign p:last-of-type {
-    font-size: 1.5em; 
-    margin-top: -25px;
-    margin-bottom: -50px;
+    font-size: .85em; 
+    margin-top: -50px;
   }
   div.sign img:last-child {
-    width: 35%;
-    height: 35%;
+    width: 80%;
+    height: 80%;
+    margin-top: -550px;
   }
-}
+  }
 
-/* @media @only screen and (max-width: 960px) {
-  
-} */
-
-@media only screen and (max-width: 600px) {
+@media (max-width: 991.98px) {
   section.index {
-    font-size: 1em;
-    text-align: justify;
-    text-align-last: center;
-    margin: auto 12.5%;
+    font-size: 1.3em;
   }
- #large-logo {
+  #large-logo {
     position: static;
     display: block;
     clear: both;
   }
   .socials {
-    display: inline-block;
-    height: 7.5%;
-    width: 7.5%;
     text-align: center;
   }
    fieldset {
      text-transform: uppercase;
    }
-  nav ul {
-    padding: 2.5px 45px;
-  }
-  nav ul li {
-    display: block;
-  }
   .sign {
-    color: white;
-    background-color: #E63946;
-    background-size: cover; 
     height: 100%;
-    text-align: center;
-    line-height: 1;
+    min-height: calc(100vh - 43.563px);
+    line-height: 2;
     justify-content: center;
+    font-size: 1.8em;
   }
   .sign p {
-    font-family: garamond;
-    margin-bottom: -50px;
+    margin-bottom: -145px;
     font-size: 1.8em;
   }
   .sign h1 {
-    font-size: 4em;
+    font-size: 6em;
   }
   div.sign p:last-of-type {
-    font-size: 1.2em; 
-    margin-top: -20px;
+    font-size: .85em; 
+    margin-top: -50px;
   }
   div.sign img:last-child {
-    width: 50%;
-    height: 50%;
-    margin: auto;
+    width: 80%;
+    height: 80%;
+    margin-top: -500px;
   }
   .menu-item {
     width: 87%;
-    max-width: 300px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    color: #F1FAEE;
-    background-position: center;
-    height: 300px;
-    margin: 0 14px 80px;
-    display: inline-block;
-   /* border: 2px solid #ca6702; */
-    border-radius: 24px;
-    overflow: hidden;
-    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
     transition: 0.5s;
   }
   .menu-item:active {
@@ -492,102 +576,212 @@ input[type="radio"], input[type="checkbox"] {
   .menu-item .price:active {
     font-size: 125%;
   }
-  .flavors label {
-    display: inline-block;
-    background-color: #9B2226;
-    color: #F1FAEE;
-    font-weight: bold;
-    padding: 10px 20px;
-    box-shadow: 4px 4px 2px 1px #001219;
+  .decorations label, .fillings label {
+    padding: 15px 20px;
     width: 64%;
-    border-radius: 10px;
-    font-size: .75em;
-    letter-spacing: .2rem;
     text-transform: uppercase;
-    text-align: center;
-  }
-  legend {
-    text-align: center;
+    font-size: 1em;
   }
   .info {
+    height: 25px;
+    width: calc(100% - 2em - 1.5% - 40px);
+    font-size: 1.1em;
+  }
+  input[type="radio"], input[type="checkbox"] {
+    margin-left: -10px;
+  }
+  .icings label, .flavors label {
+    padding: 15px 20px;
+    width: 64%;
+    text-transform: uppercase;
+    font-size: 1em;
+  }
+  input[type="submit"], input[type="reset"] {
+    font-size: 1em;
+    margin-top: 1.5%;
+    width: 40%;
+  }
+  .colorborder {
+    width: unset;
+  }
+}
+
+@media (max-width: 767.98px) {
+  section.index {
+    font-size: 1.3em;
+  }
+  #large-logo {
+    position: static;
     display: block;
-    background-color: #dddddd;
-    color: #666;
-    padding: 1em;
-    border-radius: 10px;
-    border: 2px solid transparent;
-    outline: none;
+    clear: both;
+  }
+  .socials {
+    text-align: center;
+  }
+   fieldset {
+     text-transform: uppercase;
+   }
+  nav ul {
+    padding: 2.5px 45px;
+  }
+  nav ul li {
+    display: inline-block;
+    width: 100%;
+    margin: atuo;
+    font-size: 1.2em;
+  }
+  .sign {
+    height: 100%;
+    min-height: calc(100vh - 190.125px);
+    line-height: 2;
+    justify-content: center;
+    font-size: 1.8em;
+  }
+  .sign p {
+    margin-bottom: -95px;
+    font-size: 1.8em;
+  }
+  .sign h1 {
+    font-size: 5em;
+  }
+  div.sign p:last-of-type {
+    font-size: .85em; 
+    margin-top: -85px;
+  }
+  div.sign img:last-child {
+    width: 80%;
+    height: 80%;
+    margin-top: -400px;
+  }
+  .menu-item {
+    width: 87%;
+    transition: 0.5s;
+  }
+  .menu-item:active {
+    box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.4);  
+    transform: rotate(-3deg) rotateY(10deg);
+  }
+  .menu-item:active p {
+    visibility: visible;
+  }
+  .menu-item h3:active {
+    font-size: 150%;
+  }
+  .menu-item .price:active {
+    font-size: 125%;
+  }
+  .decorations label, .fillings label {
+    padding: 15px 20px;
+    width: 64%;
+    text-transform: uppercase;
+    font-size: 1em;
+  }
+  .info {
+    height: 25px;
+    width: calc(100% - 2em - 1.5% - 40px);
+    font-size: 1.1em;
+  }
+  input[type="radio"], input[type="checkbox"] {
+    margin-left: -10px;
+  }
+  .icings label, .flavors label {
+    padding: 15px 20px;
+    width: 64%;
+    text-transform: uppercase;
+    font-size: 1em;
+  }
+  input[type="submit"], input[type="reset"] {
+    font-size: 1em;
+    margin-top: 1.5%;
+    width: 40%;
+  }
+  .colorborder {
+    width: unset;
+  }
+}
+
+@media (max-width: 575.98px) {
+  section.index {
+    font-size: 1.3em;
+  }
+ #large-logo {
+    position: static;
+    display: block;
+    clear: both;
+  }
+  .socials {
+    text-align: center;
+  }
+   fieldset {
+     text-transform: uppercase;
+  }
+  nav ul {
+    padding: 2.5px 45px;
+  }
+  nav ul li {
+    display: block;
+  }
+  .sign {
+    height: 100%;
+    line-height: 1;
+    justify-content: center;
+    min-height: calc(100vh - 170.938px);
+  }
+  .sign p {
+    margin-bottom: -65px;
+    font-size: 1em;
+  }
+  .sign h1 {
+    font-size: 3em;
+  }
+  div.sign p:last-of-type {
+    font-size: .85em; 
+    margin-top: -20px;
+  }
+  div.sign img:last-child {
+    width: 75%;
+    height: 75%;
+    margin-top: -100px;
+  }
+  .menu-item {
+    width: 87%;
+    transition: 0.5s;
+  }
+  .menu-item:active {
+    box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.4);  
+    transform: rotate(-3deg) rotateY(10deg);
+  }
+  .menu-item:active p {
+    visibility: visible;
+  }
+  .menu-item h3:active {
+    font-size: 150%;
+  }
+  .menu-item .price:active {
+    font-size: 125%;
+  }
+  .decorations label, .fillings label {
+    padding: 10px 20px;
+    width: 64%;
+    text-transform: uppercase;
+  }
+  .info {
     height: 25px;
     width: calc(100% - 2em - 1.5% - 40px);
     font-size: .85em;
   }
-  .info:hover {
-  cursor: pointer;
-  background-color: #E1FAEE;
-  }
-  .info:focus {
-  cursor: text;
-  color: #001219;
-  background-color: #F1FAEE;
-  }
-  .fillings label {
-    display: inline-block;
-    background-color: #BB3E03;
-    color: #F1FAEE;
-    font-weight: bold;
-    padding: 10px 20px;
-    box-shadow: 4px 4px 2px 1px #001219;
-    width: 64%;
-    border-radius: 10px;
-    font-size: .75em;
-    letter-spacing: .2rem;
-    text-align: center;
-    text-transform: uppercase;
-  }
   input[type="radio"], input[type="checkbox"] {
-    width: 25px;
-    height: 25px;
-    border: 25px solid #9B2226;
     margin-left: -10px;
-    border-radius: 20px;
   }
-  .icings label {
-    display: inline-block;
-    background-color: #9B2226;
-    color: #F1FAEE;
-    font-weight: bold;
+  .icings label, .flavors label {
     padding: 10px 20px;
-  box-shadow: 4px 4px 2px 1px #001219;
     width: 64%;
-    border-radius: 10px;
-    font-size: .75em;
-    letter-spacing: .2rem;
-    text-align: center;
-    text-transform: uppercase;
-  }
-  .decorations label {
-    display: inline-block;
-    background-color: #BB3E03;
-    color: #F1FAEE;
-    font-weight: bold;
-    padding: 10px 20px;
-    box-shadow: 4px 4px 2px 1px #001219;
-    width: 64%;
-    border-radius: 10px;
-    font-size: .75em;
-    letter-spacing: .2rem;
-    text-align: center;
     text-transform: uppercase;
   }
   input[type="submit"], input[type="reset"] {
-    background-color: #90be6d;
-    border: 1px #1D3557 solid;
-    padding: 10px 20px;
     font-size: .75em;
-    font-family: verdana;
     margin-top: 1.5%;
     width: 49.255%;
-    display: inline-block;
   }
   .colorborder {
     width: unset;
