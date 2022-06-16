@@ -10,7 +10,7 @@
       body {
         background-color: #E4F6F8;
       }
-      div p:last-of-type {
+      div.sign p:last-of-type {
         font-size: 1.5em; 
         margin-top: -200px;
       }
@@ -28,14 +28,8 @@
         flex-direction: row;
         background-color: #E4F6F8;
       }
-      .description-item {
+      .index:first-of-type .description-item {
         width: 40%;
-      }
-      .description-container .description-item:first-child {
-        border-right: 5px solid #E63946;
-      }
-      .description-container .description-item:nth-child(2) {
-        border-left: 5px solid #E63946;
       }
       #feedbackcontent legend {
         color: #1D3557;
@@ -60,18 +54,21 @@
         transition: 500ms;
         box-shadow: 4px 4px 3px #a7a7a7;
       }
-      @media (min-width: 0px) and (max-width: 992px) {
-        .description-container {
+      @media (max-width: 1199.98px) {
+         div.sign p:last-of-type {
+          font-size: .85em; 
+          margin-top: -145px;
+         }
+      }
+      @media (min-width: 0px) and (max-width: 991.8px) {
+        .index:first-of-type .description-container {
+          display: block;
+        }  
+        .index:last-of-type .description-container {
           flex-direction: column;
         }
         .description-item {
-          width: 100%;
-        }
-        .description-container .description-item:first-child {
-          border-right: none;
-        }
-        .description-container .description-item:nth-child(2) {
-          border-left: none;
+          width: 100% !important;
         }
         .quotes-container {
           flex-direction: column;
@@ -83,6 +80,23 @@
         #feedbackcontent legend {
           font-size: 1.3em;
           text-transform: none;
+        }
+          div.sign p:last-of-type {
+          font-size: .85em; 
+          margin-top: -50px;
+        }
+      }
+      @media (max-width: 767.98px) {
+        div.sign p:last-of-type {
+          font-size: .85em; 
+          margin-top: -85px;
+        }
+      }
+      @media (max-width: 575.98px) {
+        div.sign p:last-of-type {
+          font-size: .85em; 
+          margin-top: -20px;
+        }
       }
     </style>
   </head>
@@ -102,7 +116,8 @@
         <img src="forkxknife.png" alt="fork and knife" style="position: relative; z-index: 0; opacity: 0.7;">
       </div>
     </header>
-    <div class="quotes-container">
+    <h1 style="text-align: center; color: #1D3557; text-decoration: underline; text-decoration-color: #E63946;">Our Customers' Reviews</h1>
+    <div class="quotes-container" style="margin-bottom: 75px;">
       <div class="quote-item">
         <blockquote>
           The nicest impressions have been left by this cozy top tier restaurant! The hosts were kind and welcoming, the food was amazing, the presentation was gorgeous, the wine selection was extensive, and the dessert was delicious. I would suggest it to everyone! I would want to return to this location on a regular basis.
@@ -135,47 +150,50 @@
         </div>
       </div>
     <main>
-      <div class="description-container">
-        <div class="description-item">
         <section class="index">
-          <h2>About <strong style="color: #1D3557;">Plate Inn</strong></h2>
-            <dl>
-              <dt class="aboutus"><b>History</b></dt>
-                <dd>The first Plate Inn opened its doors on July 7th, 1987, in New York. As a diversified operation focusing on the principles of "Beauty, Hygiene, and Legacy," we are a diverse operation that makes each dish from scratch in contemporary built kitchens. Working with native chefs on hand to provide delicious and genuine cuisine that never displeases, we commenced franchising all over the United States in locations including Miami, San Francisco, Boston, and more.</dd>
-              <dt class="aboutus"><b>Additional information	</b></dt>
-                <dd>The dinner is on us at Plate Inn! <i>Literally.</i> Watch your favorite shows while eating your favorite <a href="menu.html">dishes.</a> We provide an experience like never before. Also, don't forget to wash your hands before and after eating :)</dd>
-            </dl>
+          <h1 style="font-size: 32px; text-decoration: underline; text-decoration-color: #E63946;">About <strong style="color: #1D3557;">Plate Inn</strong></h1>
+          <div class="description-container" style="margin-bottom: 75px;">
+            <div class="description-item">
+                <h3 class="aboutus" style="margin-top: 0; margin-bottom: 0;">History</h3>
+                  <p>The first Plate Inn opened its doors on July 7th, 1987, in New York. As a diversified operation focusing on the principles of "Beauty, Hygiene, and Legacy," we are a diverse operation that makes each dish from scratch in contemporary built kitchens. Working with native chefs on hand to provide delicious and genuine cuisine that never displeases, we commenced franchising all over the United States in locations including Miami, San Francisco, Boston, and more.</p>
+            </div>
+            <div class="description-item">
+              <h3 class="aboutus" style="margin-top: 0; margin-bottom: 0;">Additional Information</h3>
+                <p>Nice to meat you&#33; The dinner is on us at Plate Inn! <i>Literally.</i> Watch your favorite shows while eating your favorite <a href="menu.html">dishes.</a> We provide an experience like never before. In terms of innovation, hardware, and operational processes, Plate Inn is focused on adopting the finest natural food and underscoring environmental sustainability. We have a whisk that you may be willing to take. Also, don't forget to wash your hands before and after eating :)</p>
+            </div>
+          </div>
           </section>
-       </div>
-        <div class="description-item">
-          <section class="index">
-            <h2>Contact <strong style="color: #1D3557;">Us</strong></h2>
-              <dl>
-                <dt class="aboutus"><b>Phone Number</b></dt>
-                  <dd><a href="tel:123-456-7890">Call us at 123-456-7890</a></dd>
-                <dt class="aboutus"><b>Email Address</b></dt>
-                  <dd><a href="mailto:rarte-suriel@enyfa.net">Email us at email@address.com</a></dd>
-                <dt class="aboutus"><b>Socials</b></dt>
-              </dl>
-          </section>
-          <div style="text-align: center;">
+        <section class="index">
+          <h1 style="font-size: 32px; text-decoration: underline; text-decoration-color: #E63946;">Contact <span style="color: #1D3557;">Us</span></h1>
+          <div class="description-container">
+            <div class="description-item">
+              <a href="tel:123-456-7890"><img src="phone.png" alt="Phone Icon" class="socials"/></a>
+            </div>
+            <div class="description-item">
+              <a href="mailto:rarte-suriel@enyfa.net"><img src="mail.png" alt="Mail Icon" class="socials"/></a>
+            </div>
+            <div class="description-item">
               <a href="https://www.instagram.com/" target="_blank"><img src="instagram.png" alt="Instagram Logo" class="socials"/></a>
-              <a href="https://www.twitter.com/" target="_blank"><img src="twitter.png" alt="Twitter Logo" class="socials"/></a>
-               <a href="https://www.facebook.com/" target="_blank"><img src="facebook.png" alt="Facebook Logo" class="socials"/></a>
+            </div>
+            <div class="description-item">
+          <a href="https://www.twitter.com/" target="_blank"><img src="twitter.png" alt="Twitter Logo" class="socials"/></a>
+            </div>
+            <div class="description-item">
+          <a href="https://www.facebook.com/" target="_blank"><img src="facebook.png" alt="Facebook Logo" class="socials"/></a>
+            </div>
           </div>
-          <div id="feedbackcontent">
-            <form>
-              <fieldset>
-                <legend>Anonymous Feedback</legend>
-                <label for="feedback"><textarea name="feedback" class="feedback" placeholder="200 Characters Limit" rows="5" cols="40" maxlength="200"></textarea></label>
-              </fieldset>
-              <div>
-                <input type="submit"/>
-              </div>
-            </form>
-          </div>
+        </section>
+        <div id="feedbackcontent">
+          <form>
+            <fieldset>
+              <legend><h3 class="aboutus">Anonymous Feedback</h3></legend>
+              <label for="feedback"><textarea name="feedback" class="feedback" placeholder="200 Characters Limit" rows="5" cols="40" maxlength="200"></textarea></label>
+            </fieldset>
+            <div>
+              <input type="submit"/>
+            </div>
+          </form>
         </div>
-      </div>
     </main>
       <script src="script.js"></script>
   </body>

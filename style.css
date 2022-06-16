@@ -177,7 +177,7 @@ main.menu {
 div.sign img:last-child {
   width: 45%;
   height: 45%;
-   margin: auto;
+  margin: auto;
   margin-top: -300px;
 }
 
@@ -207,10 +207,8 @@ div.sign img:last-child {
 }
 
 .socials {
-  display: inline-block;
   width: 36px;
   height: 36px;
-  margin: auto;
   transition: 0.2s;
   border-radius: 4px;
 }
@@ -286,26 +284,26 @@ nav ul li a:active {
   line-height: 3;
 }
 
-dd > a, .index > a {
+.description-container p > a, .index > a, dd > a {
   transition: 0.2s;
   color: ##ADD8E6;
   border-radius: .5em;
   padding: 0em 4px;
 }
 
-dd > a:link, .index > a:link {
+.description-container p > a:link, .index > a:link, dd > a:link {
   color: #a7a7a7;
 }
 
-dd > a:visited, .index > a:visited {
+.description-container p > a:visited, .index > a:visited, dd > a:visited {
   color: #b4b4b4;
 }
 
-dd > a:hover, .index > a:hover {
+.description-container p > a:hover, .index > a:hover, dd > a:hover {
   background-color: #E2D8C0;
 }
 
-.index dl, .index dt, .index dd {
+.description-container p, .index dl, .index dt, .index dd {
   margin: 0;
 }
 
@@ -493,6 +491,10 @@ input[type="radio"], input[type="checkbox"] {
   border-radius: 20px;
 }
 
+/* Top Food Page */
+
+
+
 /* media */
 
 @media (max-width: 1199.98px) {
@@ -504,15 +506,11 @@ input[type="radio"], input[type="checkbox"] {
     font-size: 1.8em;
   }
   .sign p {
-    margin-bottom: -145px;
+    margin-bottom: -70px;
     font-size: 1.8em;
   }
   .sign h1 {
     font-size: 6em;
-  }
-  div.sign p:last-of-type {
-    font-size: .85em; 
-    margin-top: -50px;
   }
   div.sign img:last-child {
     width: 80%;
@@ -524,6 +522,7 @@ input[type="radio"], input[type="checkbox"] {
 @media (max-width: 991.98px) {
   section.index {
     font-size: 1.3em;
+    margin: auto 5%;
   }
   #large-logo {
     position: static;
@@ -532,6 +531,7 @@ input[type="radio"], input[type="checkbox"] {
   }
   .socials {
     text-align: center;
+    margin: .25em;
   }
    fieldset {
      text-transform: uppercase;
@@ -549,10 +549,6 @@ input[type="radio"], input[type="checkbox"] {
   }
   .sign h1 {
     font-size: 6em;
-  }
-  div.sign p:last-of-type {
-    font-size: .85em; 
-    margin-top: -50px;
   }
   div.sign img:last-child {
     width: 80%;
@@ -644,10 +640,6 @@ input[type="radio"], input[type="checkbox"] {
   .sign h1 {
     font-size: 5em;
   }
-  div.sign p:last-of-type {
-    font-size: .85em; 
-    margin-top: -85px;
-  }
   div.sign img:last-child {
     width: 80%;
     height: 80%;
@@ -704,7 +696,7 @@ input[type="radio"], input[type="checkbox"] {
   section.index {
     font-size: 1.3em;
   }
- #large-logo {
+  #large-logo {
     position: static;
     display: block;
     clear: both;
@@ -733,10 +725,6 @@ input[type="radio"], input[type="checkbox"] {
   }
   .sign h1 {
     font-size: 3em;
-  }
-  div.sign p:last-of-type {
-    font-size: .85em; 
-    margin-top: -20px;
   }
   div.sign img:last-child {
     width: 75%;
